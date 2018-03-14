@@ -41,17 +41,21 @@ export default {
     return {
       strategies: [],
 
-      candleSizeUnit: 'hours',
+      candleSizeUnit: 'minutes',
       rawCandleSize: 1,
 
-      strategy: 'MACD',
-      historySize: 10,
+      strategy: 'TMA',
+      historySize: 1,
 
       rawStratParams: '',
       rawStratParamsError: false,
 
       emptyStrat: false,
-      stratParams: {}
+      stratParams: {
+        short: 3,
+        medium: 21,
+        long: 144
+      }
     };
   },
   created: function () {

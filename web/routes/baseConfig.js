@@ -47,7 +47,7 @@ config.sqlite = {
 }
 
   // Postgres adapter example config (please note: requires postgres >= 9.5):
-config.postgresql = {
+config.postgresql = UIconfig.postgresql ? UIconfig.postgresql : {
   path: 'plugins/postgresql',
   version: 0.1,
   connectionString: 'postgres://user:pass@localhost:5432', // if default port
@@ -57,7 +57,7 @@ config.postgresql = {
     module: 'pg',
     version: '6.1.0'
   }]
-}
+};
 
 // Mongodb adapter, requires mongodb >= 3.3 (no version earlier tested)
 config.mongodb = {
