@@ -12,7 +12,8 @@
   "scripts": {
     "test": "./node_modules/.bin/mocha test/*.js --recursive test -u tdd --reporter spec",
     "build-ui": "cd web/vue; yarn && yarn build && rm -rf node_modules; cd ../..",
-    "run-docker": "docker build -t gekko .; docker run -ti --net='host' gekko",
+    "build-docker": "docker build -t gekko .",
+    "run-docker": "docker run -ti --net='host' gekko",
     "start": "node ./gekko --config config.js --ui"
   },
   "author": "Mike van Rossum <mike@mvr.me>",

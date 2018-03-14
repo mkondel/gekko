@@ -33,7 +33,8 @@ export default {
   },
   computed: {
     imageUrl: function() {
-      return basePath + 'assets/gekko.jpg';
+      // return basePath + 'assets/gekko.jpg';
+      return `https://picsum.photos/g/400/300/?random`;
     }
   }
 }
