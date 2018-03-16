@@ -6,18 +6,18 @@
 const CONFIG = {
   headless: false,
   api: {
+    port: 3000,
+    // port: 80,
     // host: '127.0.0.1',
-    // port: 3000,
     host: '0.0.0.0',
-    port: 80,
     timeout: 120000 // 2 minutes
   },
   ui: {
     ssl: false,
-    // host: '0.0.0.0',
-    // port: 3000,
-    host: 'gordongekko.us-east-1.elasticbeanstalk.com',
-    port: 80,
+    host: '0.0.0.0',
+    // port: 80,
+    port: 3000,
+    // host: 'gordongekko.us-east-1.elasticbeanstalk.com',
     path: '/'
   },
   adapter: 'postgresql',
