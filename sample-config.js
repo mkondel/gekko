@@ -16,8 +16,8 @@ config.debug = true; // for additional logging / debugging
 config.watch = {
 
   // see https://gekko.wizb.it/docs/introduction/supported_exchanges.html
-  exchange: 'poloniex',
-  currency: 'USDT',
+  exchange: 'gdax',
+  currency: 'USD',
   asset: 'BTC',
 
   // You can set your own tickrate (refresh rate).
