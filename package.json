@@ -47,6 +47,7 @@
     "koa-static": "^2.0.0",
     "kraken-api-es5": "^1.0.0",
     "lakebtc_nodejs": "0.1.x",
+    "lodash": "^2.x",
     "mathjs": "^4.0.1",
     "moment": "^2.20.1",
     "neataptic": "^1.4.7",
