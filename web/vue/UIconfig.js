@@ -6,37 +6,39 @@
 const CONFIG = {
   headless: false,
   api: {
-    // port: 80,
-    port: 3000,
-    // host: '0.0.0.0',
-    host: '127.0.0.1',
+    port: 80,
+    // port: 3000,
+    host: '0.0.0.0',
+    // host: '127.0.0.1',
     // host: 'localhost',
     timeout: 120000 // 2 minutes
   },
   ui: {
     ssl: false,
-    // port: 80,
-    port: 3000,
+    port: 80,
+    // port: 3000,
     // host: 'gordongekko.us-east-1.elasticbeanstalk.com',
     host: 'localhost',
     // host: '0.0.0.0',
     path: '/'
   },
-  adapter: 'sqlite',
-  // adapter: 'postgresql',
-  // postgresql: {
-  //   path: 'plugins/postgresql',
-  //   version: 0.1,
-  //   connectionString: 'postgres://budfox:GordonGekko@localhost:5432',
-  //   // connectionString: 'postgres://budfox:GordonGekko@db:5432',
-  //   // connectionString: 'postgres://budfox:GordonGekko@trading.cw86y7awzy2g.us-east-1.rds.amazonaws.com:5432',
-  //   database: 'gekko',
-  //   schema: 'public',
-  //   dependencies: [{
-  //     module: 'pg',
-  //     version: '6.1.0'
-  //   }]
-  // }
+  // adapter: 'sqlite',
+  adapter: 'postgresql',
+  postgresql: {
+    path: 'plugins/postgresql',
+    version: 0.1,
+    // connectionString: 'postgres://budfox:GordonGekko@localhost:5432',
+    connectionString: 'postgres://budfox:GordonGekko@db:5432',
+    // connectionString: 'postgres://budfox:GordonGekko@trading.cw86y7awzy2g.us-east-1.rds.amazonaws.com:5432',
+    database: 'gekko',
+    schema: 'public',
+    dependencies: [{
+      module: 'pg',
+      version: '6.1.0'
+    }]
+  },
+  //ensure you have created gekko/nn_files folder
+  // filewriter: { nnfilepath: "/var/nn_files" } ,
 }
 
 if(typeof window === 'undefined')
